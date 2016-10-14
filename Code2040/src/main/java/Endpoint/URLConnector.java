@@ -16,8 +16,11 @@ public class URLConnector   {
 		try {
 			url = new URL("http://challenge.code2040.org/api/register");
 			urlConnect = (HttpURLConnection) url.openConnection();
+			System.out.println("Connection to url, " + url.getProtocol() + " is opened.");
 			urlConnect.setDoOutput(true);
 			urlConnect.setRequestMethod("POST");
+			int responseCode = urlConnect.getResponseCode();
+			System.out.println("Response Code:" + responseCode);
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
