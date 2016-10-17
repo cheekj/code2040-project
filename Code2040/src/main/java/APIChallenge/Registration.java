@@ -1,4 +1,4 @@
-package Endpoint;
+package APIChallenge;
 
 import java.io.IOException;
 import java.io.OutputStreamWriter;
@@ -17,48 +17,33 @@ public class Registration {
 	static HttpURLConnection urlConnect;
 
 	public static void main(String[] args) {
-		connectToURL("http://challenge.code2040.org/api/register");
-		Map<String , String> map = new HashMap<String , String>();
-		map.put("token", token);
-		map.put("github", github);
-		Gson gson = new Gson();
-		String json = gson.toJson(map);
-		writeToURL(json);
-	}
-	
-	/**
-	 * Opens a connection to the requested URL and determines HTTP method "POST". 
-	 * @param urlName String that represents URL.
-	 */
-	public static void connectToURL(String urlName) {
 		try {
-			URL url = new URL(urlName);
+			URL url = new URL("http://challenge.code2040.org/api/register");
 			urlConnect = (HttpURLConnection) url.openConnection();
 			System.out.println("Connection to url, " + url.toString() + " is opened.");
 			urlConnect.setDoOutput(true);
 			urlConnect.setRequestMethod("POST");
 			urlConnect.setRequestProperty("Content-Type", "application/json");
+			
+			Map<String , String> map = new HashMap<String , String>();
+			map.put("token", token);
+			map.put("github", github);
+			Gson gson = new Gson();
+			String json = gson.toJson(map);
+			
+			OutputStreamWriter writer = new OutputStreamWriter(urlConnect.getOutputStream());
+			writer.write(json);
+			writer.close();
+
+			int responseCode = urlConnect.getResponseCode();
+			System.out.println(responseCode);
+			urlConnect.disconnect();
+			
 		} catch(MalformedURLException e) {
 			e.printStackTrace();
 		} catch(IOException e) {
 			e.printStackTrace();
 		}
-	}
-	
-	/**
-	 * Sends data to URL through POST method
-	 * @param message String that represent data to be sent to URL.
-	 */
-	public static void writeToURL(String message) {
-		try {
-			OutputStreamWriter writer = new OutputStreamWriter(urlConnect.getOutputStream());
-			writer.write(message);
-			writer.close();
-
-			int responseCode = urlConnect.getResponseCode();
-			System.out.println(responseCode);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		
 	}
 }
