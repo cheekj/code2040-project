@@ -10,7 +10,10 @@ import org.joda.time.DateTimeZone;
 
 import com.google.gson.Gson;
 
-
+/*
+ * Retrieve a date in ISO 8601 format and a interval value in seconds. Add the seconds
+ * to the given date and send the new date to an endpoint in JSON format.
+ */
 public class Date {
 	
 	final static String token = "bd65002e3921154babf10a8219856548";
