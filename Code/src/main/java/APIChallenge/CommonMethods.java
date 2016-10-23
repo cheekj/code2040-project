@@ -23,7 +23,12 @@ public class CommonMethods {
 	final static String github = "https://github.com/cheekj/code2040-project.git";
 	
 	static HttpURLConnection urlConnect;
-	
+	/**
+	 * Makes the map for the json to be sent when first connecting to URL. If the parameter
+	 * is true, add the github link to the map.
+	 * @param registration true if on registration step only
+	 * @return Map with the token key and value
+	 */
 	public static Map<String , String> makeJSON(boolean registration) {
 		Map<String , String> map  = null;
 		if (registration == true) {
