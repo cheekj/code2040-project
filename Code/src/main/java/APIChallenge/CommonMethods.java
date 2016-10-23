@@ -14,6 +14,11 @@ import java.util.regex.Pattern;
 
 /**
  * Contains commons methods used among each of the steps.
+ * 
+ * WHAT I LEARNED FROM API CHALLENGE:
+ * - Learned how to connect to a URL, send data, and retrieve a response.
+ * - Gained more familiarity with JSON and how to parse data retrieved in JSON format.
+ * - Learned a few more valuable external libraries like Joda-Time and Google's GSON library.
  * @author Jonathan
  *
  */
