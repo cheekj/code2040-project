@@ -84,7 +84,12 @@ public class CommonMethods {
 		}
 		return response;
 	}
-	
+	/**
+	 * Parse the given string with the given regex pattern.
+	 * @param response StringBuilder to be parsed
+	 * @param regex Pattern to parse response with.
+	 * @return ArrayList containing parsed strings.
+	 */
 	public static ArrayList<String> parseResponse(StringBuilder response , String regex) {
 		ArrayList<String> answer = new ArrayList<String>();
 		String word = "";

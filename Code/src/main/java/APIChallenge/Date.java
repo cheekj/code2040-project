@@ -43,6 +43,8 @@ public class Date {
 		String finalDate = "";
 		int hourIndex = 2;
 		int secondIndex = answerArray.size() - 1;
+		
+		// Format the date to ISO 8601 format
 		for (int index = 0; index < answerArray.size(); index++) {
 			if (index < hourIndex) {
 				finalDate += answerArray.get(index) + "-";

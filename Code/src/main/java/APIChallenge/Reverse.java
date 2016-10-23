@@ -8,8 +8,6 @@ import com.google.gson.Gson;
 
 public class Reverse {
 	
-	final static String token = "bd65002e3921154babf10a8219856548";
-
 	public static void main(String[] args) {
 		Map<String , String> map = CommonMethods.makeJSON(false);
 		Gson gson = new Gson();
