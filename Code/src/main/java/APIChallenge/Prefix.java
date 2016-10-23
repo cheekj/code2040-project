@@ -7,6 +7,10 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
+/*
+ * Retrieve a prefix and array. Create an array of the elements that do not start with the 
+ * prefix and send it to an endpoint in JSON format.
+ */
 public class Prefix {
 
 	public static void main(String[] args) {
