@@ -10,8 +10,8 @@ public class Registration {
 	
 	public static void main(String[] args) {
 		Map<String , String> map = CommonMethods.makeJSON(true);
-		Gson gson = new Gson();
-		String json = gson.toJson(map);
+		Gson Gson = new Gson();
+		String json = Gson.toJson(map);
 		Map<String , Integer> responseMap = CommonMethods.sendJSONToURL("http://challenge.code2040.org/api/register" , json);
 		System.out.println(responseMap);
 	} 
