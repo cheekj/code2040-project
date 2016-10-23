@@ -2,7 +2,9 @@ package APIChallenge;
 import java.util.Map;
 import com.google.gson.Gson;
 
-
+/*
+Connects to registration endpoint and sends token and github link in JSON format.
+ */
 public class Registration {
 	
 	final static String token = "bd65002e3921154babf10a8219856548";
