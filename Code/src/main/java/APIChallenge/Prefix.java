@@ -39,7 +39,7 @@ public class Prefix {
 		System.out.println(finalJSON.toString());
 		
 		Map<String, Integer> validateMap = CommonMethods.sendJSONToURL("http://challenge.code2040.org/api/prefix/validate", finalJSON.toString());
-		System.out.println(validateMap);
+		System.out.print(validateMap);
 	}
 	
 
