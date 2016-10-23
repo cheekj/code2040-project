@@ -28,7 +28,7 @@ public class NeedleInHaystack {
 		map.put("needle", match);
 		String needleJSON = gson.toJson(map);
 		Map<String , Integer> validateMap = CommonMethods.sendJSONToURL("http://challenge.code2040.org/api/haystack/validate", needleJSON);
-		System.out.println(validateMap);
+		System.out.print(validateMap);
 	} 
 	
 	
