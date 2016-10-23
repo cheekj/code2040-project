@@ -13,6 +13,6 @@ public class Registration {
 		Gson Gson = new Gson();
 		String json = Gson.toJson(map);
 		Map<String , Integer> responseMap = CommonMethods.sendJSONToURL("http://challenge.code2040.org/api/register" , json);
-		System.out.println(responseMap);
+		System.out.print(responseMap);
 	} 
 }
