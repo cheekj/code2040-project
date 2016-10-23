@@ -1,3 +1,2 @@
 # code2040-project
-<html src="https://fellows.code2040.org/applications/795/tech>
-</html>
+API Challenge for Code 2040. All code written in Java.
