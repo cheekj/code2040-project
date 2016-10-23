@@ -3,9 +3,10 @@ package APIChallenge;
 import java.util.Map;
 
 import com.google.gson.Gson;
-
-//import com.google.gson.Gson;
-
+import com.google.gson.Gson;
+/*
+ * Reverses string retrieved from endpoint and sends it back in JSON format.
+ */
 public class Reverse {
 	
 	public static void main(String[] args) {
