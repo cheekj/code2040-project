@@ -57,7 +57,7 @@ public class Date {
 		map.put("datestamp", finalDate);
 		String finalJSON = gson.toJson(map);
 		Map<String , Integer> validateMap = CommonMethods.sendJSONToURL("http://challenge.code2040.org/api/dating/validate", finalJSON);
-		System.out.println(validateMap);
+		System.out.print(validateMap);
 		
 	} 
 	
