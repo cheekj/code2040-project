@@ -19,9 +19,8 @@ public class Reverse {
 		StringBuilder answer = response.reverse();
 		map.put("string", answer.toString());
 		String reverse = gson.toJson(map);
-		System.out.println(reverse);
 		
 		Map<String , Integer> validateMap = CommonMethods.sendJSONToURL("http://challenge.code2040.org/api/reverse/validate", reverse);
-		System.out.println(validateMap);
+		System.out.print(validateMap);
 	} 
 }
