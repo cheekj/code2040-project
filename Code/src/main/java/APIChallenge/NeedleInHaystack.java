@@ -3,7 +3,10 @@ import java.util.ArrayList;
 import java.util.Map;
 import com.google.gson.Gson;
 
-
+/*
+ * Retrieve a JSON with a needle and haystack value. Find the needle string in the array of 
+ * strings and send back the index position to an endpoint.
+ */
 public class NeedleInHaystack {
 
 	public static void main(String[] args) {
